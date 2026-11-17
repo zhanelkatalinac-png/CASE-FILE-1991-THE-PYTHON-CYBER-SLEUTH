@@ -1,0 +1,1386 @@
+print("🕵🏻‍♂️˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️")
+print("         CASE FILE 1991: THE PYTHON CYBER SLEUTH")
+print("🕵🏻‍♂️˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️")
+
+def ask_yes_no(prompt_text):
+    while True:
+        variable = input(prompt_text + " (yes/no): ").strip().lower()
+        if variable in ["yes", "no"]:
+            return variable
+        else:
+                print(f"Invalid input, Agent {name}. Please type 'yes' or 'no'.")
+
+name = input("\nEnter your name before the investigation starts: ").capitalize()
+
+# Python overview and game introduction
+print("✎ᝰ.📓 ˎˊ˗✎ᝰ.🗒 ˎˊ˗✎ᝰ.📓 ˎˊ˗✎ᝰ.🗒 ˎˊ˗✎ᝰ.📓 ˎˊ˗")
+print("\n[SYSTEM BRIEFING: WHAT IS PYTHON?]")
+print(f"\nWelcome to the Cyber Crimes Division, Agent {name}.\n")
+print("Before you can investigate digital crimes, you must understand your tool.")
+print("Python is a high-level, general purpose programming language designed")
+print("to be remarkably clean, readable, and structured like plain English")
+print("Created in 1989 by Guido van Rossum, Python strips away complex syntax")
+print("so investigators can focus purely on logic, data analysis, and problem-solving.")
+print("In this simulator, Python is not just a language-it is your digital toolkit")
+
+rdy = ask_yes_no(f"\nAre you ready Agent {name}?")
+
+# If they type "no", they enter the review loop
+while rdy == "no":
+    print("\nLet's review our lesson first!")
+    print("Chapter 1: Introduction to Programming")
+    print("Chapter 2: Python Basic Syntax")
+    print("Chapter 3: Arithmetic Operators and Expressions")
+    print("Chapter 4: Basic input and Output in Python")
+    print("Chapter 5: Conditional Statements in Python")
+    print("Chapter 6: Logical Operator")
+    print("Chapter 7: Introduction to Iteration and Loops")
+    
+    valid_chapters = ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7"]
+    
+    while True:
+        chapter_choice = input("\nChoose a chapter to review (e.g., Chapter 1): ").strip(). capitalize()
+        if chapter_choice in valid_chapters:
+            break
+        print(f"Invalid input, Agent {name}. Please type a valid chapter name (e.g., Chapter 1).")
+
+    if chapter_choice == "Chapter 1":
+        print("\n--- Chapter 1: Introduction to Programming ---")
+        print("Programming Language is a special language that computers understand and use to perform tasks")
+        print("Python is a widely-used programming language that was created by Guido van Rossum in 1991")
+        print("He is a Dutch software engineer best known for creating the Python programming language in 1991.")
+        print("Python Programming is a high-level, interpreted, and general-purpose programming language designed to be simple, readable, and easy to learn")
+    
+    elif chapter_choice == "Chapter 2":
+        print("\n--- Chapter 2: Python Basic Syntax ---")
+        print("1. PYTHON SYNTAX BASICS")
+        print("~ Syntax - set of rules for writing correct programs.")
+        print("~ Case Sensitivity - Python treats uppercase and lowercase differently.")
+        print("(ex. `age` and `AGE` are distinct variables)")
+        print("~ Indentation: Uses space to define code blocks.")
+        print("\n2. Output and Print Statement")
+        print("~ The print() Function: Displays information on the screen")
+        print("~ Printing Text (Strings) - must be enclosed in quotes (\"\")")
+        print("~ Print Numbers - can be printed directly without quotes")
+        print("~ Printing Variables - pass name without quotes")
+        print("3. Python Comments")
+        print("~ Purpose - explanatory notes completely ignored by Python")
+        print("~ Single-Line Comment - starts with hash (#)")
+        print("~ Multi-Line Comment - enclosed in triple quotes.")
+        print("4. Variables and Naming rules")
+        print("~ Definition - named storage locations holding changeable data.")
+        print("~ Assignment - uses '=' operator.")
+        print("~ Naming rules: must start with a letter or underscore (_); cannot start with a number.")
+        print("5. Core Data Types")
+        print("~ Int (Integer) - whole numbers without decimals (ex. 6)")
+        print("~ float (Float) - numbers with decimal points (ex. 5.6)")
+        print("~ str (String) - Text or characters inside quotes.")
+        print("~ bool (Boolean) - True or False logical values.")
+    
+    elif chapter_choice == "Chapter 3":
+        print("\n--- Chapter 3: Arithmetic Operators and Expressions ---")
+        print("Arithmetic Operators: Symbols used to perform mathematical calculations on numbers, working the same way as everyday mathematics.")
+        print("Python Operators & Core Functions:")
+        print("Addition (+): Adds two numbers.")
+        print("Subtraction (-): Subtracts the second value from the first.")
+        print("Multiplication (*): Multiplies values together.")
+        print("Division (/): Divides two values and returns a decimal (float) result (ex. 15/3 = 5.0).")
+        print("Floor Division (//): Divides two values and returns only the whole number part (ex. 17//3 = 5).")
+        print("Modulus (%): Returns the remainder of a division operation (ex. 10%3 = 1).")
+        print("Exponentiation (**): Raises a number to the power of another (ex. 2**3 = 8).")
+        print("Expressions: An expression combines values, variables, and operators to evaluate a final result (ex. result = a + b).")
+        print("Order of Operations (PEMDAS): Python evaluates expressions following the standard hierarchy: Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction.")
+    
+    elif chapter_choice == "Chapter 4":
+        print("\n--- Chapter 4: Basic Input and Output in Python ---")
+        print("Accepting User Input (input): Pauses execution to accept data from the user using the syntax [ex. variable = input('Prompt message: ')].")
+        print("String type by default: All inputs captured via input() are treated as strings (str) by default.")
+        print("Formatting Output: Outputs can be displayed and formatted using commas inside print() (ex. print('Name :', name )) or using f-strings (ex. print(f'student: {name}'))")
+        print("Type Conversion: Inputs can be explicitly converted to other data types depending on what is needed")
+        print("Float Input: float(input(...)) for decimal numbers.")
+        print("Integer Input: int(input(...)) for whole numbers.")
+        print("Boolean Input: Evaluated using conditions (e.g., checking if text equals 'yes').")
+    
+    elif chapter_choice == "Chapter 5":
+        print("\n--- Chapter 5: Conditional Statements in Python ---")
+        print("Introduction to Conditional Statements: Programs make decisions based on whether a condition evaluates to True or False.")
+        print("Relational / Comparison Operators: Used to compare two values, always returning True or False:")
+        print("== (Equal to), != (Not equal to), > (Greater than), < (Less than), >= (Greater than or equal to), <= (Less than or equal to).")
+        print("The if Statement: Executes a block of code only when the condition is True. The block must be indented.")   
+        print("The if-else Statement: Provides an alternative action block when the if condition is False.")
+        print("The if-elif-else Statement: Evaluates multiple conditions from top to bottom, executing the first condition that turns True.")
+        print("Nested Conditions: A conditional statement placed inside another conditional statement (e.g., checking an inner condition only if the outer condition is True).")
+    
+    elif chapter_choice == "Chapter 6":
+        print("\n--- Chapter 6: Logical Operator ---")
+        print("Overview: Logical operators are used to combine or reverse conditions in a Python program and are commonly used with if, elif, and else statements.")
+        print("The 'and' Operator: Returns True only when all conditions are true.")
+        print("The 'or' Operator: Returns True when at least one condition is true.")
+        print("The 'not' Operator: Reverses the result of a condition, turning True into False and False into True")
+    
+    elif chapter_choice == "Chapter 7":
+        print("\n--- Chapter 7: Introduction to iteration and Loops ---")
+        print("Introduction to Iteration: Iteration means repeating a process or executing a set of instructions multiple times, where each repetition is an iteration. Loops make code shorter, cleaner, and easier to modify than writing repetitive instructions.")
+        print("Types of Loops in Python:")
+        print("for loop: Repeats instructions for each item in a sequence. Best used when the number of repetitions is known. Requires a colon (:) after the header and indentation for the loop body.")
+        print("while loop: Repeats instructions as long as a specified condition remains True. Best used when repetition depends on a dynamic condition. Requires a condition check and a way to alter variables (e.g., count += 1) so the loop eventually stops")
+
+    # Ask if they are ready for the game now
+    ready_for_game = ask_yes_no("\nAre you ready to start the game now? (Type yes to play, no to review another chapter)")
+    
+    if ready_for_game == "yes":
+        rdy = "yes"  # Exits review loop and starts the game
+    else:
+        rdy = "no"   # Keeps review loop running for another chapter
+
+# Game starts here
+print(f"\nLet's begin solving the case, Agent {name}.")
+
+# Narrative Briefing
+print("\nTHE NARRATIVE BRIEFING")
+print("It's 2:00 AM at the Cyber Crime Division precinct. Rain streaks the window")
+print("and your workstation monitor flashes a pulsing red alert: a rogue virus has")
+print("initiated a countdown on the city's central vault. To track down the digital")
+print("intruder, headquarters requires all rookie investigators to initialize their")
+print("detective profiles and crack the encrypted archives of the legendary architect")
+print("who built the Python environment: Guido van Rossum.\n")
+
+score = 0
+max_score = 10
+
+print("˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚")
+print("        CHAPTERS 1 & 2: VARIABLES, DATA TYPES & SYNTAX")
+print("˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚")
+
+print(f"Agent {name}, initialize your terminal and verify the inventor's data.\n")
+
+# Challenge no. 1
+print("[Evidence no. 1] The Inventor's Name")
+print("Guido van Rossum released Python in 1991, naming it after the classic 1970s BBC comedy series Monty Python's Flying Circus.")
+print("Code snippet:")
+print('  architect_name = "Guido van Rossum"')
+
+while True:
+    ans1 = input("\n[Terminal Query] What data type is stored inside `architect_name`? ").strip().lower()
+    if "str" in ans1 or "string" in ans1:
+        print("✅ACCESS GRANTED: Correct! Text enclosed in quotes is a string (str).")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+      
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 2 ---
+print("\n[Evidence no.2] Historical Timestamp")
+print("The rogue virus header contains the exact year Python was conceived by Guido.")
+print("Code snippet:")
+print('  creation_year = 1989')
+
+while True:
+    ans2 = input("\n[Terminal Query] What data type (`str`/`int`/`float`) represents a whole number like `1989`? ").strip().lower()
+    if "int" in ans2 or "integer" in ans2:
+        print("✅ ACCESS GRANTED: Correct! Whole numbers without decimals are integers (`int`).")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 3 ---
+print("\n[Evidence no.3] Detective Field Notes & Comments")
+print("You need to leave a hidden investigator's remark in your script that Python will completely ignore.")
+
+while True:
+    ans3 = input("\n[Terminal Query] Which symbol starts a single-line comment in Python? (# / ## / *): ").strip()
+    if ans3 == "#":
+        print("✅ ACCESS GRANTED: Correct! The `#` symbol marks a single-line comment.")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+      
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 4 ---
+print("\n[Evidence no.4] Thermal Sensor Reading")
+print("Your crime scene temperature log records a precise decimal value from the overheating server rack.")
+print("Code snippet:")
+print('  server_temp = 36.5')
+
+while True:
+    ans4 = input("\n[Terminal Query] What data type (`int`/`float`/`str`) represents numbers with decimals like `36.5`? ").strip().lower()
+    if ans4 == "float":
+        print("✅ ACCESS GRANTED: Correct! Numbers with decimal points are floats (`float`).")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+      
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 5 ---
+print("\n[Evidence no.5] Case Sensitivity Rule")
+print("You declare two distinct security tokens in your case file:")
+print('  EvidenceCode = "XYZ"')
+print('  evidencecode = "ABC"')
+
+while True:
+    ans5 = input("\n[Terminal Query] True or False: Does Python treat `EvidenceCode` and `evidencecode` as the exact same variable? (true/false): ").strip().lower()
+    if ans5 == "false":
+        print("✅ ACCESS GRANTED: Correct! Python is strictly case-sensitive; uppercase and lowercase letters matter.")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+      
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 6 ---
+print("\n[Evidence no.6] Assigning Suspect Data")
+print("You capture the primary suspect's alias into memory using the assignment operator.")
+print("Code snippet:")
+print('  suspect_alias = "GhostCoder"')
+
+while True:
+    ans6 = input("\n[Terminal Query] Which symbol acts as the assignment operator (`=` / `==` / `->`) to store data into a variable? ").strip()
+    if ans6 == "=":
+        print("✅ ACCESS GRANTED: Correct! The `=` operator assigns values to variables.")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+      
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 7 ---
+print("\n[Evidence no.7] Variable Naming Violation")
+print("An automated intrusion log throws a SyntaxError because a rogue agent tried to initialize a bad variable name.")
+print("Code snippet attempted:")
+print('  1st_suspect = "Unauthorized"')
+
+while True:
+    ans7 = input("\n[Terminal Query] Why did this variable declaration fail? (Starts with a number / Contains uppercase / Uses quotes): ").strip().lower()
+    if "number" in ans7:
+        print("✅ ACCESS GRANTED: Correct! Variable names cannot start with a number.")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+      
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 8 ---
+print("\n[Evidence no.8] Status Flag Logic")
+print("The vault override switch relies on a binary operational status check.")
+print("Code snippet:")
+print('  vault_secure = True')
+
+while True:
+    ans8 = input("\n[Terminal Query] What data type (`bool`/`str`/`int`) represents truth values like `True` or `False`? ").strip().lower()
+    if ans8 == "bool":
+        print("✅ ACCESS GRANTED: Correct! Booleans (`bool`) represent True or False states.")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 9 ---
+print("\n[Evidence no.9] Terminal Display Command")
+print("You need to output the decrypted vault code onto your monitor screen.")
+
+while True:
+    ans9 = input("\n[Terminal Query] Which built-in Python function displays information on the screen? (print() / output() / display()): ").strip().lower()
+    if "print()" in ans9 or "print" in ans9:
+        print("✅ ACCESS GRANTED: Correct! The `print()` function outputs information to the terminal.")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+      
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- CHALLENGE 10 ---
+print("\n[Evidence no.10] Multi-Line Documentation")
+print("You must archive a lengthy case summary report directly into the script database using a multi-line format.")
+
+while True:
+    ans10 = input("\n[Terminal Query] What special character set (used three times in a row) encloses a multi-line comment? (quotes / hashes / slashes): ").strip().lower()
+    if ans10 == "quotes":
+        print("✅ ACCESS GRANTED: Correct! Multi-line comments or docstrings are enclosed in triple quotes (`\"\"\"`).")
+        score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+      
+print(f"Archive Score: {score}/{max_score}\n" + "-" * 50)
+
+
+# --- STAGE REPORT ---
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+print(f"        📊 CHAPTER 1 & 2 FINAL CLEARANCE REPORT: {score}/{max_score}    ")
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+if score == max_score:
+    print(f"🌟 OUTSTANDING WORK, AGENT {name}! You have successfully cracked all 10 evidence logs.")
+    print("👉 You have fully cleared Chapters 1 & 2 and are ready to proceed to Chapter 3 (Arithmetic Operators & Cipher Math)!")
+
+#CHAPTER 3: CRYPTOGRAPHIC DECRYPTION & CIPHER MATH       
+print("\n˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚")
+print("      CHAPTER 3: CRYPTOGRAPHIC DECRYPTION & CIPHER MATH")
+print("˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚")
+print("GhostCoder has locked the vault using the ciphertext log: 'JKRVW'.")
+print("You must execute a chronological decryption pipeline—slicing data files,")
+print("analyzing frequencies, reversing cipher shifts, and unmasking the hacker!\n")
+
+ch3_score = 0
+ch3_max = 10
+
+# --- EVIDENCE 1 (Phase 1: File Ingestion & Slicing) ---
+print("[Evidence no.1] Splitting the Encrypted Payload")
+print("Before decoding, your script must partition a 10-byte encrypted payload stream across 2 parallel channels.")
+print('  payload_segment = 10 / 2  # Splits data for parallel processing')
+print("Note: Payload refers to the core data stream being analyzed.")
+
+while True:
+    ans1 = input("\n[Terminal Query] What is the float result of dividing `10 / 2`? ").strip()
+    if ans1 in ["5.0", "5"]:
+        print("✅ ACCESS GRANTED: Correct! Standard division (`/`) splits the payload into 5.0-byte channels.")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `10 / 2`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 2 (Phase 1: File Ingestion & Slicing) ---
+print("\n[Evidence no.2] Aligning Decryption Block Boundaries")
+print("You align 25 fragmented byte blocks into clean server sectors across our 5 ciphertext letters.")
+print('  clean_blocks = 25 // 5  # Floor division to align whole blocks')
+print("Note: Floor division (`//`) discards fractional remainders to keep server byte blocks uniform.")
+
+while True:
+    ans2 = input("\n[Terminal Query] What whole-number result does `25 // 5` return? ").strip()
+    if ans2 == "5":
+        print("✅ ACCESS GRANTED: Correct! Floor division aligns 5 clean server sectors.")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `25 // 5`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 3 (Phase 2: Cryptanalysis & Pattern Matching) ---
+print("\n[Evidence no.3] Scaling Cipher Frequency Weights")
+print("With clean data in hand, you run cryptanalysis. Our target word ('GHOST') has 5 letters, multiplied by a weight factor of 3.")
+print('  weighted_score = 5 * 3  # Scales frequency analysis for our 5-letter cipher')
+print("Note: Cryptanalysis studies character frequency patterns to break encrypted logs.")
+
+while True:
+    ans3 = input("\n[Terminal Query] What is the numeric result of `5 * 3`? ").strip()
+    if ans3 == "15":
+        print("✅ ACCESS GRANTED: Correct! Multiplication (`*`) scales our frequency weight to 15.")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `5 * 3`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 4 (Phase 3: Core Decryption & Shifting) ---
+print("\n[Evidence no.4] Understanding the Forward Shift (How it was locked)")
+print("GhostCoder took the plaintext letter 'G' (ASCII code 71) and shifted it forward by 3 to create 'J'.")
+print('  ciphertext_code = 71 + 3  # Results in ASCII 74 ("J")')
+print("Note: ASCII is the numerical standard for computer characters; addition (`+`) moves them forward along the alphabet.")
+
+while True:
+    ans4 = input("\n[Terminal Query] What is the resulting ASCII code when you calculate `71 + 3`? ").strip()
+    if ans4 == "74":
+        print("✅ ACCESS GRANTED: Correct! ASCII 74 corresponds to the ciphertext letter 'J'.")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `71 + 3`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 5 (Phase 3: Core Decryption & Shifting) ---
+print("\n[Evidence no.5] Reversing the Caesar Shift (Decryption)")
+print("To decrypt the intercepted letter 'J' (ASCII 74), you subtract the shift key (3).")
+print('  plaintext_code = 74 - 3 ')
+print("Note: Plaintext is the original readable message; subtraction (`-`) reverses the shift to uncover it.")
+
+while True:
+    ans5 = input("\n[Terminal Query] What is the resulting ASCII code when you calculate `74 - 3`? ").strip()
+    if ans5 == "71":
+        print("✅ ACCESS GRANTED: Correct! ASCII 71 successfully uncovers the first letter: 'G'.")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `74 - 3`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 6 (Phase 3: Core Decryption & Shifting) ---
+print("\n[Evidence no.6] Wrapping Around the Alphabet Wheel (Modulus)")
+print("A shift pushes an alphabet index past 'Z' (index 25) to position 28, requiring a wrap-around.")
+print('  wrapped_index = 28 % 26  # Wraps position 28 back into the 0-25 alphabet range')
+print("Note: Modulus (`%`) calculates division remainders, acting like a circular alphabet wheel.")
+
+while True:
+    ans6 = input("\n[Terminal Query] What remainder does the modulus operator return for `28 % 26`? ").strip()
+    if ans6 == "2":
+        print("✅ ACCESS GRANTED: Correct! Modulus returns remainder 2, wrapping the index back to position 'C'.")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `28 % 26`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 7 (Phase 4: Advanced Security & PEMDAS) ---
+print("\n[Evidence no.7] Cracking the Exponential Sub-Key")
+print("GhostCoder's defense lock scales its security tier exponentially using a base-2 power.")
+print('  sub_key = 2 ** 3  # Raises base security tier exponentially')
+print("Note: Exponentiation (`**`) increases security complexity rapidly to block automated attacks.")
+
+while True:
+    ans7 = input("\n[Terminal Query] What is the resulting value of `2 ** 3`? ").strip()
+    if ans7 == "8":
+        print("✅ ACCESS GRANTED: Correct! Exponentiation computes the security key (`2^3 = 8`).")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `2 ** 3`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 8 (Phase 4: Advanced Security & PEMDAS) ---
+print("\n[Evidence no.8] Evaluating the Decryption Formula")
+print("You calculate a multi-step decryption multiplier equation using standard operator precedence.")
+print('  multiplier = 10 + 5 * 2  # Combined expression for final key adjustment')
+
+while True:
+    ans8 = input("\n[Terminal Query] Following PEMDAS, what is the numeric result of evaluating `10 + 5 * 2`? ").strip()
+    if ans8 == "20":
+        print("✅ ACCESS GRANTED: Correct! Multiplication evaluates first (`5 * 2 = 10`, plus 10 = 20).")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `10 + 5 * 2`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 9 (Phase 4: Advanced Security & PEMDAS) ---
+print("\n[Evidence no.9] Overriding Precedence in the Decryption Vector")
+print("The final vault override vector forces addition to happen before multiplication using grouping symbols.")
+print('  vector_offset = (2 + 3) * 4')
+
+
+while True:
+    ans9 = input("\n[Terminal Query] What is the numeric result of `(2 + 3) * 4`? ").strip()
+    if ans9 == "20":
+        print("✅ ACCESS GRANTED: Correct! Parentheses evaluate first (`2 + 3 = 5`, times 4 = 20).")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Calculate `(2 + 3) * 4`. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- EVIDENCE 10 (Phase 5: The Final Payoff) ---
+print("\n[Evidence no.10] Unmasking the Threat")
+print("Your complete 9-step script successfully processes the intercepted ciphertext log: 'JKRVW'.")
+print('  ciphertext_log = "JKRVW" -> decoded via Caesar subtraction pipeline')
+print("74-3 = 71(G)")
+print("Note: Ciphertext is the scrambled message text that your script translates back into plaintext.")
+
+while True:
+    ans10 = input("\n[Terminal Query] Your decryption pipeline finishes translating 'JKRVW'. Type the 5-letter name of the unmasked hacker: ").strip().upper()
+    if ans10 == "GHOST":
+        print("✅ ACCESS GRANTED: Outstanding! The ciphertext successfully unmasks the culprit: **GHOST** is fully decrypted!")
+        ch3_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Decrypt 'JKRVW' using your shift pipeline. Try again, {name}.")
+
+print(f"Cipher Score: {ch3_score}/{ch3_max}\n" + "-" * 50)
+
+
+# --- CHAPTER 3 STAGE REPORT ---
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+print(f"        📊 CHAPTER 3 FINAL CLEARANCE REPORT: {ch3_score}/{ch3_max}    ")
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+if ch3_score == ch3_max:
+    print(f"🌟 OUTSTANDING WORK, AGENT {name}! Your decryption pipeline successfully cracked 'JKRVW' and unmasked GHOST.")
+    print("👉 Ready to proceed to Chapter 4 (Basic Input and Output)?")
+
+# --- CHAPTER 4: BASIC INPUT AND OUTPUT IN PYTHON ---
+print("\n˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚")
+print("         CHAPTER 4: BASIC INPUT AND OUTPUT IN PYTHON")
+print("˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚")
+
+print("With GhostCoder's syndicate alias exposed, headquarters requires you")
+print("to build an interactive terminal interrogation system. You must capture")
+print("suspect testimonies, process biometric logs, and format crime scene reports")
+print("using Python's input and output functions across 10 security clearance checkpoints!\n")
+
+ch4_score = 0
+ch4_max = 10
+
+# --- CHALLENGE 1 (Chapter 4, Q1) ---
+print("[Evidence no.1] Interrogating the Witness")
+print("You need to prompt the detained suspect for their official statement inside the precinct terminal.")
+print('  suspect_statement = input("Enter suspect statement: ")')
+
+while True:
+    ans1 = input("\n[Terminal Query] What built-in Python function pauses execution to accept text input from the suspect's keyboard? ").strip().lower()
+    if "input" in ans1:
+        print("✅ ACCESS GRANTED: Correct! The `input()` function pauses execution and captures keystroke data.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 2 (Chapter 4, Q2) ---
+print("\n[Evidence no.2] Analyzing Intercepted PIN Data")
+print("GhostCoder enters a 4-digit override vault PIN '1991' into your terminal prompt.")
+print('  intercepted_pin = input("Enter vault PIN: ")')
+
+while True:
+    ans2 = input("\n[Terminal Query] By default, what data type does the `input()` function always store captured keystrokes as? (str/int/float): ").strip().lower()
+    if "str" in ans2 or "string" in ans2:
+        print("✅ ACCESS GRANTED: Correct! All data captured via `input()` is treated as text strings (`str`) by default.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 3 (Chapter 4, Q3) ---
+print("\n[Evidence no.3] Formatting the Precinct Prompt")
+print("You configure the terminal interface to display a custom interrogation question when requesting badge clearance.")
+print('  badge_code = input("Enter investigator badge ID: ")')
+
+while True:
+    ans3 = input("\n[Terminal Query] Where must the custom interrogation question string be placed when calling the input function? (Inside parentheses / Outside parentheses / In print statements): ").strip().lower()
+    if "inside" in ans3:
+        print("✅ ACCESS GRANTED: Correct! The prompt question is passed inside the parentheses of the `input()` function.")
+        ch4_score += 1
+        break
+    else:
+        print("❌ ACCESS DENIED. The prompt string goes inside the `input()` parentheses. Try again, Agent.")
+
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 4 (Chapter 4, Q4) ---
+print("\n[Evidence no.4] Displaying Evidence Logs with Commas")
+print("You output the recovered suspect details onto your precinct monitor screen using traditional  separation.")
+print('  print("Suspect Name: ", suspect_alias)')
+
+while True:
+    ans4 = input("\n[Terminal Query] When displaying multiple items separated by automatic spaces in a `print()` statement, what punctuation symbol is used? (, / + / ;): ").strip()
+    if ans4 == ",":
+        print("✅ ACCESS GRANTED: Correct! Commas are used to separate multiple output items in `print()`.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 5 (Chapter 4, Q5) ---
+print("\n[Evidence no.5] Compiling Classified Dossiers with F-Strings")
+print("You format a clean, professional investigative report summary to display the live suspect profile on your screen.")
+print('  print(_"Target Agent: {agent_name}, Clearance: {badge_level}")')
+
+while True:
+    ans5 = input("\n[Terminal Query] What single prefix letter must be placed right before the string quotes to activate an interpolated string? ").strip().lower()
+    if ans5 == "f":
+        print("✅ ACCESS GRANTED: Correct! Using an f-string allows direct variable injection inside string brackets.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 6 (Chapter 4, Q6) ---
+print("\n[Evidence no.6] Bypassing the Numeric Vault Lock")
+print("To calculate the actual math combination for the vault door, you must convert the captured text PIN into a usable whole number.")
+print('  numeric_pin = ___(input("Enter vault combination: "))')
+
+while True:
+    ans6 = input("\n[Terminal Query] What casting function explicitly converts a text string into a whole number integer for calculations? ").strip().lower()
+    if "int" in ans6:
+        print("✅ ACCESS GRANTED: Correct! `int()` converts text strings into mathematical whole numbers.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 7 (Chapter 4, Q7) ---
+print("\n[Evidence no.7] Processing Crime Scene Thermal Logs")
+print("Your crime scene server room log captures precise decimal temperature readings that must be evaluated mathematically.")
+print('  server_temp = _____(input("Enter room temperature: "))')
+
+while True:
+    ans7 = input("\n[Terminal Query] What function converts input text into a decimal number containing fractional points? ").strip().lower()
+    if ans7 == "float":
+        print("✅ ACCESS GRANTED: Correct! `float()` converts numeric text strings into decimal values.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 8 (Chapter 4, Q8) ---
+print("\n[Evidence no.8] Automated Suspect Clearance Verification")
+print("The terminal scans a suspect's ID card and prompts: 'Are you authorized? (yes/no)' to generate a security status flag.")
+
+while True:
+    ans8 = input("\n[Terminal Query] What comparison operator evaluates text responses to return a Boolean True or False value? (== / = / +): ").strip()
+    if ans8 == "==":
+        print("✅ ACCESS GRANTED: Correct! Equality operators (`==`) evaluate text conditions to verify true or false access.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+        
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 9 (Chapter 4, Q9) ---
+print("\n[Evidence no.9] Assembling the Complete Suspect Intake Form")
+print("You write a streamlined multi-variable intake script capturing the suspect's alias string and numeric threat level simultaneously.")
+print('  threat_level = int(input("Enter threat level (1-5): "))')
+
+while True:
+    ans9 = input("\n[Terminal Query] True or False: Is it valid syntax in Python to nest an `input()` function directly inside a type casting function like `int(input(...))`? (true/false): ").strip().lower()
+    if ans9 == "true":
+        print("✅ ACCESS GRANTED: Correct! Nesting `input()` inside `int()` or `float()` instantly casts keystroke data upon entry.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 10 (Chapter 4, Q10) ---
+print("\n[Evidence no.10] Generating the Final Precinct Clearance Dossier")
+print("You compile all gathered evidence variables into a final master string to unlock the path to Chapter 5.")
+print('  print(f"Suspect: {suspect_alias}, Threat Level: {threat_level}, Status: Secured")')
+
+while True:
+    ans10 = input("\n[Terminal Query] To output this compiled investigative dossier cleanly to your precinct monitor, what built-in function must wrap the string?  ").strip().lower()
+    if "print" in ans10:
+        print("✅ ACCESS GRANTED: Correct! The `print()` function displays the final dossier onto your terminal screen.")
+        ch4_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch4_score}/{ch4_max}\n" + "-" * 50)
+
+
+# --- CHAPTER 4 STAGE REPORT ---
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+print(f"        📊 CHAPTER 4 FINAL CLEARANCE REPORT: {ch4_score}/{ch4_max}    ")
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+if ch4_score == ch4_max:
+    print(f"🌟 STELLAR WORK, AGENT {name}! You have completed all 10 Basic Input and Output terminal challenges and secured the precinct files.")
+    print("👉 Ready to proceed to Chapter 5 (Conditional Statements)?")
+
+# --- CHAPTER 5: CONDITIONAL STATEMENTS IN PYTHON ---
+print("\n˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚")
+print("       CHAPTER 5: CONDITIONAL STATEMENTS IN PYTHON")
+print("˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚")
+print("With the suspect cornered in the server bay, your terminal must make")
+print("automated decisions. You will use relational operators, `if` statements,")
+print("`elif` chains, and nested conditions to evaluate threat levels and")
+print("secure the central vault across 10 security checkpoints!\n")
+
+ch5_score = 0
+ch5_max = 10
+
+# --- CHALLENGE 1 (Chapter 5, Q1) ---
+print("\n[Evidence no.1] Badge Verification Check")
+print("You need to check if an incoming scan matches the suspect's active database ID.")
+print('  is_match = scan_id == "GHOST_99"')
+
+while True:
+    ans1 = input("\n[Terminal Query] What relational operator checks if two values are equal? ").strip()
+    if ans1 == "==":
+        print("✅ ACCESS GRANTED: Correct! The equality operator (`==`) compares values to return True or False.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 2 (Chapter 5, Q2) ---
+print("\n[Evidence no.2] Thermal Hazard Warning")
+print("Your server room temperature sensor checks if the heat level exceeds safe operating limits.")
+print('  overheating = server_temp __ 40.0')
+
+while True:
+    ans2 = input("\n[Terminal Query] What operator checks if a value is strictly greater than another? ").strip()
+    if ans2 == ">":
+        print("✅ ACCESS GRANTED: Correct! The greater-than operator (`>`) evaluates whether a value exceeds a threshold.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 3 (Chapter 5, Q3) ---
+print("\n[Evidence no.3] Storage Quota Threshold")
+print("The system checks if the remaining storage capacity has dropped below or equals the critical warning limit.")
+print('  storage_critical = free_space __ 5.0')
+
+while True:
+    ans3 = input("\n[Terminal Query] Which operator checks if a value is less than or equal to another? ").strip()
+    if ans3 == "<=":
+        print("✅ ACCESS GRANTED: Correct! The `<=` operator checks for lesser-than or equal conditions.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 4 (Chapter 5, Q4) ---
+print("\n[Evidence no.4] Detecting Unauthorized Tokens")
+print("The firewall scans network packets to flag any token that does NOT match the master key.")
+print('  unauthorized = token != "MASTER_KEY"')
+
+while True:
+    ans4 = input("\n[Terminal Query] What operator checks if two values are NOT equal? ").strip()
+    if ans4 == "!=":
+        print("✅ ACCESS GRANTED: Correct! The not-equal operator (`!=`) verifies when values differ.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 5 (Chapter 5, Q5) ---
+print("\n[Evidence no.5] The Basic `if` Statement")
+print("You write an automated lockdown script that triggers only when an intrusion alert is detected.")
+print('  if intrusion_detected:')
+print('      print("LOCKDOWN INITIATED")')
+
+while True:
+    ans5 = input("\n[Terminal Query] When does the code block inside an `if` statement execute? (When condition is True / When condition is False / Always): ").strip().lower()
+    if ans5 == "true":
+        print("✅ ACCESS GRANTED: Correct! An `if` statement executes its code block exclusively when the condition is True.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 6 (Chapter 5, Q6) ---
+print("\n[Evidence no.6] Enforcing Code Block Indentation")
+print("Your script throws an `IndentationError` because a detective forgot to space over the conditional block.")
+
+while True:
+    ans6 = input("\n[Terminal Query] In Python, what structural formatting is strictly required for code blocks beneath an `if` statement? (Indentation / Semicolons / Parentheses): ").strip().lower()
+    if ans6 == "indention":
+        print("✅ ACCESS GRANTED: Correct! Python uses indentation (spaces) to define code blocks under conditional headers.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 7 (Chapter 5, Q7) ---
+print("\n[Evidence no.7] The `if-else` Branch")
+print("You set up a security gate: grant vault entry if verified, otherwise trigger an alarm.")
+print('  if verified:')
+print('      grant_access()')
+print('  else:')
+print('      trigger_alarm()')
+
+while True:
+    ans7 = input("\n[Terminal Query] When does the `else` block execute in a conditional statement? (When the if condition is False / When the if condition is True / Always): ").strip().lower()
+    if "false" in ans7:
+        print("✅ ACCESS GRANTED: Correct! The `else` block serves as a fallback that triggers when the preceding condition is False.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 8 (Chapter 5, Q8) ---
+print("\n[Evidence no.8] Evaluating Multiple Threat Levels (`if-elif-else`)")
+print("The precinct terminal evaluates suspect threat levels from top to bottom (Low, Moderate, Critical).")
+print('  if threat_level == 3:')
+print('      print("Critical")')
+print('  elif threat_level == 2:')
+print('      print("Moderate")')
+
+while True:
+    ans8 = input("\n[Terminal Query] In an `if-elif-else` chain, how does Python evaluate the conditions? (Top to bottom / Bottom to top / Randomly): ").strip().lower()
+    if ans8 == "top to bottom":
+        print("✅ ACCESS GRANTED: Correct! Python evaluates conditions sequentially from top to bottom, executing the first matching branch.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 9 (Chapter 5, Q9) ---
+print("\n[Evidence no.9] Nested Security Conditions")
+print("You implement a dual-layer checkpoint: an inner verification check runs only after the outer badge scan passes.")
+print('  if badge_scanned:')
+print('      if clearance_level >= 5:')
+print('          print("Access Granted")')
+
+while True:
+    ans9 = input("\n[Terminal Query] What term describes placing one conditional `if` statement entirely inside another `if` statement? (Nested condition / Looped condition / Flipped condition): ").strip().lower()
+    if "nested" in ans9:
+        print("✅ ACCESS GRANTED: Correct! Nested conditions allow multi-layered decision making.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 10 (Chapter 5, Q10) ---
+print("\n[Evidence no.10] Final Vault Breach Decision Script")
+print("You assemble the complete conditional logic script to determine whether to unlock the central vault or activate full facility lockdown.")
+print('  if suspect_score >= 10 and override_pin == 1991:')
+print('      print("Vault Unlocked")')
+print('  else:')
+print('      print("Facility Lockdown")')
+
+while True:
+    ans10 = input("\n[Terminal Query] What keyword introduces the fallback branch when all preceding `if` and `elif` checks fail? ").strip().lower()
+    if ans10 == "else":
+        print("✅ ACCESS GRANTED: Correct! The `else` keyword catches all remaining cases when prior conditions fail.")
+        ch5_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch5_score}/{ch5_max}\n" + "-" * 50)
+
+
+# --- CHAPTER 5 STAGE REPORT ---
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+print(f"        📊 CHAPTER 5 FINAL CLEARANCE REPORT: {ch5_score}/{ch5_max}    ")
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+if ch5_score == ch5_max:
+    print(f"🌟 INCREDIBLE WORK, AGENT {name}! You have mastered Conditional Statements and secured the precinct server bay.")
+    print("👉 Ready to proceed to Chapter 6 (Logical Operators)")
+
+# --- CHAPTER 6: LOGICAL OPERATORS IN PYTHON ---
+print("\n˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚")
+print("           CHAPTER 6: LOGICAL OPERATORS IN PYTHON")
+print("˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚")
+print("To bypass GhostCoder's multi-layered electronic locks, a single condition")
+print("isn't enough. You must combine and reverse complex security rules using")
+print("Python's logical operators (`and`, `or`, `not`) across 10 security checkpoints!\n")
+
+ch6_score = 0
+ch6_max = 10
+
+# --- CHALLENGE 1 (Chapter 6, Q1) ---
+print("[Evidence no.1] Dual-Factor Authentication (`and`)")
+print("The vault requires both a valid badge scan AND a correct PIN code to grant entry.")
+print('  vault_access = badge_scanned and pin_correct')
+
+while True:
+    ans1 = input("\n[Terminal Query] When does the `and` logical operator return True? (When all conditions are true / When at least one is true / Never): ").strip().lower()
+    if "all" in ans1:
+        print("✅ ACCESS GRANTED: Correct! The `and` operator returns True only when every condition in the expression evaluates to True.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 2 (Chapter 6, Q2) ---
+print("\n[Evidence no.2] Evaluating an `and` Truth Table")
+print("Your terminal evaluates a live network authentication check: `True and False`.")
+
+while True:
+    ans2 = input("\n[Terminal Query] What is the boolean result of `True and False`? (true/false): ").strip().lower()
+    if ans2 == "false":
+        print("✅ ACCESS GRANTED: Correct! Since one condition is False, the `and` expression evaluates to False.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 3 (Chapter 6, Q3) ---
+print("\n[Evidence no.3] Alternative Access Routes (`or`)")
+print("The firewall allows entry if the user is either a precinct detective OR possesses a master key card.")
+print('  entry_allowed = is_detective or master_key')
+
+while True:
+    ans3 = input("\n[Terminal Query] When does the `or` logical operator return True? (When at least one condition is true / When all conditions are true / Only when both are false): ").strip().lower()
+    if "least" in ans3 or "one" in ans3:
+        print("✅ ACCESS GRANTED: Correct! The `or` operator returns True if at least one connected condition is True.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 4 (Chapter 6, Q4) ---
+print("\n[Evidence no.4] Evaluating an `or` Truth Table")
+print("Your terminal checks an offline sensor fallback state: `False or False`.")
+
+while True:
+    ans4 = input("\n[Terminal Query] What is the boolean result of `False or False`? (true/false): ").strip().lower()
+    if ans4 == "false":
+        print("✅ ACCESS GRANTED: Correct! When both conditions are False, an `or` expression evaluates to False.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 5 (Chapter 6, Q5) ---
+print("\n[Evidence no.5] Reversing System Alarms (`not`)")
+print("You write a safety override script that flips the alarm status to confirm the facility is peaceful.")
+print('  is_safe = not alarm_triggered')
+
+while True:
+    ans5 = input("\n[Terminal Query] What keyword reverses the boolean outcome of a condition, turning True into False? ").strip().lower()
+    if ans5 == "not":
+        print("✅ ACCESS GRANTED: Correct! The `not` operator reverses a boolean value.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 6 (Chapter 6, Q6) ---
+print("\n[Evidence no.6] Evaluating a Negated Expression")
+print("The precinct terminal checks the negation of an active security breach: `not True`.")
+
+while True:
+    ans6 = input("\n[Terminal Query] What is the exact boolean result of `not True`? (true/false): ").strip().lower()
+    if ans6 == "false":
+        print("✅ ACCESS GRANTED: Correct! `not True` flips the state to False.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 7 (Chapter 6, Q7) ---
+print("\n[Evidence no.7] Complex Firewall Authorization")
+print("You combine multiple logical checks to secure the main frame database against GhostCoder's botnet.")
+print('  secure = (badge_level >= 3 and is_active) or override_active')
+
+while True:
+    ans7 = input("\n[Terminal Query] In Python conditional logic, what logical keyword is used to ensure multiple conditions must *all* be met simultaneously?  ").strip().lower()
+    if ans7 == "and":
+        print("✅ ACCESS GRANTED: Correct! `and` enforces that all paired conditions must be satisfied.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 8 (Chapter 6, Q8) ---
+print("\n[Evidence no.8] Verifying Network Isolation")
+print("You check if the server network is NOT currently connected to the public internet.")
+print('  isolated = not public_facing')
+
+while True:
+    ans8 = input("\n[Terminal Query] If `public_facing` is False, what does `not public_facing` evaluate to? (true/false): ").strip().lower()
+    if ans8 == "true":
+        print("✅ ACCESS GRANTED: Correct! `not` evaluates to True, confirming network isolation.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 9 (Chapter 6, Q9) ---
+print("\n[Evidence no.9] Checking Backup Power Systems (`or` Logic)")
+print("The server bay remains powered if either Generator A OR Generator B is online.")
+print('  power_active = gen_a_online or gen_b_online')
+
+while True:
+    ans9 = input("\n[Terminal Query] If Generator A is False but Generator B is True, what is the result of `gen_a_online or gen_b_online`? (true/false): ").strip().lower()
+    if ans9 == "true":
+        print("✅ ACCESS GRANTED: Correct! Since at least one generator is online, `or` evaluates to True.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 10 (Chapter 6, Q10) ---
+print("\n[Evidence no.10] Master Security Gate Validation")
+print("You assemble the final logical gate script required to clear Chapter 6 and unlock iterative loops.")
+print('  access_granted = (badge_verified and clearance >= 4) and not lockdown_active')
+
+while True:
+    ans10 = input("\n[Terminal Query] True or False: Can logical operators (`and`, `or`, `not`) be combined together within complex conditional statements? (true/false): ").strip().lower()
+    if ans10 == "true":
+        print("✅ ACCESS GRANTED: Correct! Combining logical operators allows sophisticated multi-parameter security checks.")
+        ch6_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+            
+print(f"Terminal Score: {ch6_score}/{ch6_max}\n" + "-" * 50)
+
+
+# --- CHAPTER 6 STAGE REPORT ---
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+print(f"        📊 CHAPTER 6 FINAL CLEARANCE REPORT: {ch6_score}/{ch6_max}    ")
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+if ch6_score == ch6_max:
+    print(f"🌟 INCREDIBLE WORK, AGENT {name}! You have mastered Logical Operators and bypassed GhostCoder's multi-layered security gates.")
+    print("👉 Ready to proceed to Chapter 7 (Introduction to Iteration and Loops)")
+
+# --- CHAPTER 7: ITERATION & LOOPS (THE FINAL COUNTDOWN) ---
+print("\n˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚")
+print("     CHAPTER 7: ITERATION & LOOPS (THE FINAL COUNTDOWN)")
+print("˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚")
+print("GhostCoder has initiated a 10-tier self-destruct sequence on the precinct's")
+print("main server. To override the lockdown and trap the rogue hacker for good,")
+print("you must master Python iteration (`while` loops, `for` loops, and control")
+print("statements) across the final 10 security clearance checkpoints!\n")
+
+ch7_score = 0
+ch7_max = 10
+
+# --- CHALLENGE 1 (Chapter 7, Q1) ---
+print("[Evidence no.1] The Decryption `while` Loop")
+print("You need a loop that keeps scanning server sectors as long as the security lock is active.")
+print('  while server_locked:')
+print('      scan_sectors()')
+
+while True:
+    ans1 = input("\n[Terminal Query] As long as what kind of boolean condition remains True does a `while` loop continue running?  ").strip().lower()
+    if "true" in ans1:
+        print("✅ ACCESS GRANTED: Correct! A `while` loop repeats continuously as long as its governing condition evaluates to True.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 2 (Chapter 7, Q2) ---
+print("\n[Evidence no.2] Avoiding Infinite Terminal Traps")
+print("Your brute-force script freezes because the counter variable never updates, creating an endless loop.")
+
+while True:
+    ans2 = input("\n[Terminal Query] What dangerous loop state occurs if a `while` loop's condition never becomes False? (Infinite loop / Closed loop / Static loop): ").strip().lower()
+    if "infinite" in ans2:
+        print("✅ ACCESS GRANTED: Correct! Failing to update loop variables causes an infinite loop that crashes terminal processes.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 3 (Chapter 7, Q3) ---
+print("\n[Evidence no.3] Breaking Out of Quarantine (`break`)")
+print("When your script successfully detects GhostCoder's IP address, you must instantly exit the scanning loop.")
+print('  if ip_found:')
+
+while True:
+    ans3 = input("\n[Terminal Query] What Python keyword is used to immediately terminate and exit out of a running loop? (break / stop / exit): ").strip().lower()
+    if ans3 == "break":
+        print("✅ ACCESS GRANTED: Correct! The `break` statement halts loop execution instantly.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 4 (Chapter 7, Q4) ---
+print("\n[Evidence no.4] Skipping Corrupted Packets")
+print("Your loop encounters a corrupted firewall packet and must skip it to proceed to the next iteration.")
+print('  if packet_corrupted:')
+print('      ___________')
+
+while True:
+    ans4 = input("\n[Terminal Query] What keyword skips the rest of the current loop iteration and jumps straight to the next cycle? (continue / skip / next): ").strip().lower()
+    if ans4 == "continue":
+        print("✅ ACCESS GRANTED: Correct! The `continue` statement skips remaining code in the current iteration and loops back.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 5 (Chapter 7, Q5) ---
+print("\n[Evidence no.5] Traversing Evidence Files (`for` Loops)")
+print("You write a `for` loop to inspect every individual evidence log file stored in the precinct directory.")
+print('  for file in evidence_directory:')
+print('      print(file)')
+
+while True:
+    ans5 = input("\n[Terminal Query] What loop type in Python is specifically designed for iterating over a sequence (like a list, string, or range)? (for loop / while loop / if loop): ").strip().lower()
+    if "for" in ans5:
+        print("✅ ACCESS GRANTED: Correct! A `for` loop iterates sequentially through items in any sequence.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 6 (Chapter 7, Q6) ---
+print("\n[Evidence no.6] Iterating Over a Numeric Range (`range()`)")
+print("You program a security countdown timer that loops exactly 5 times using the range function.")
+print('  for i in range(5):')
+print('      print(i)')
+
+while True:
+    ans6 = input("\n[Terminal Query] By default, what number does the `range(5)` sequence start counting from in Python? ").strip()
+    if ans6 == "0":
+        print("✅ ACCESS GRANTED: Correct! Python's `range()` function starts at 0 by default.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 7 (Chapter 7, Q7) ---
+print("\n[Evidence no.7] Accumulating Evidence Scores")
+print("You use an accumulator variable inside a loop to tally up your final investigator clearance points.")
+print('  total_score = 0')
+print('  for score in checkpoint_scores:')
+print('      total_score += score')
+
+while True:
+    ans7 = input("\n[Terminal Query] What shorthand assignment operator adds a value to a variable and updates it simultaneously? (+= / -= / *=): ").strip()
+    if ans7 == "+=":
+        print("✅ ACCESS GRANTED: Correct! The `+=` operator is the standard accumulator assignment shortcut.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 8 (Chapter 7, Q8) ---
+print("\n[Evidence no.8] Brute-Forcing the Lockdown Password")
+print("Your automated cracking script loops through a sequence of numbers to guess GhostCoder's override PIN.")
+print('  guess = 0')
+print('  while guess != 1991:')
+print('      guess += 1')
+
+while True:
+    ans8 = input("\n[Terminal Query] When this loop finally hits `1991`, what will the conditional check `guess != 1991` evaluate to? (False / True / None): ").strip().lower()
+    if "false" in ans8:
+        print("✅ ACCESS GRANTED: Correct! When `guess` equals 1991, they are no longer not-equal, making the condition False so the loop terminates.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 9 (Chapter 7, Q9) ---
+print("\n[Evidence no.9] Analyzing Character Strings")
+print("You loop through the encrypted string 'GHOST' character by character to verify server checksums.")
+print('  for character in "GHOST":')
+print('      print(character)')
+
+while True:
+    ans9 = input("\n[Terminal Query] True or False: Can a `for` loop iterate directly through each individual character of a text string? (true/false): ").strip().lower()
+    if ans9 == "true":
+        print("✅ ACCESS GRANTED: Correct! Strings are iterable sequences in Python, allowing character-by-character loops.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+
+# --- CHALLENGE 10 (Chapter 7, Q10) ---
+print("\n[Evidence no.10] Final Master Override Script")
+print("You assemble the ultimate loop script to purge GhostCoder's network backdoor and lock down the mainframe.")
+print('  while system_secured == False:')
+print('      purge_backdoor()')
+
+while True:
+    ans10 = input("\n[Terminal Query] What loop structure is most commonly used for input validation and repeating until a correct condition is met? ").strip().lower()
+    if ans10 == "while loop":
+        print("✅ ACCESS GRANTED: Correct! `while` loops are the premier choice for condition-based validation and gameplay loops.")
+        ch7_score += 1
+        break
+    else:
+        print(f"❌ ACCESS DENIED. Try again, Agent {name}.")
+        
+print(f"Terminal Score: {ch7_score}/{ch7_max}\n" + "-" * 50)
+
+#              CASE FILE CLOSED: THE GRAND FINALE               
+print("｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆")
+print("          🕵️ CASE FILE 1991: FINAL INVESTIGATION REPORT SUMMARY")
+print("｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆")
+print(f"  Lead Detective: AGENT {name}")
+print(f"  Final Chapter 7 Score: {ch7_score}/{ch7_max}")
+print("｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆" *5)
+
+if ch7_score == ch7_max:
+    print(f"\n🌟 OUTSTANDING WORK, DETECTIVE {name}! ALL CHAPTERS CLEARED!")
+    print("--------------------------------------------------------------------")
+    print("The precinct terminal flashes bright green. Lines of automated script execute")
+    print("flawlessly across your monitor screen, severing GhostCoder's backdoor connection.")
+    print("A loud pneumatic hiss echoes through the precinct server bay as the heavy vault")
+    print("doors seal shut automatically, trapping the rogue hacker's signal trace.")
+    print("")
+    print("The red warning klaxons fade into silence. Headquarters broadcasts a secure")
+    print("priority message directly to your console:")
+    print(f"--> 'Agent {name}, GhostCoder's syndicate is dismantled. Master cipher cracked,")
+    print("    network secured, and Python proficiency verified at maximum clearance.'")
+    print("")
+    print("You lean back in your desk chair, sip your coffee, and close the terminal.")
+    print("Case File 1991 is officially closed. Another victory for the Cyber Crimes Division.")
+        
+    print("｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆")
+    print("      🏆 CONGRATULATIONS ON COMPLETING THE CYBER SLEUTH SIMULATOR! 🏆")
+    print("｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆｡𖦹°‧⌛ ⋆✴︎ 🔍 ˚｡⋆")
+
+#          CASE FILE 1991: THE PYTHON CYBER SLEUTH SIMULATOR    
+#                      THE GRAND FINALE & CREDITS               
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+print("            🚨 MAINFRAME LOCKDOWN: FINAL SYSTEM PURGE")
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+print("GhostCoder's final payload is executing! To permanently seal the vault")
+print("and terminate the intruder's remote terminal, execute the master override.\n")
+
+# Interactive final prompt to seal the case
+while True:
+    final_cmd = input("[Terminal Query] Type 'OVERRIDE' to execute the purge script: ").strip().upper()
+    if final_cmd == "OVERRIDE":
+        print("\n⚡ INITIATING PURGE SEQUENCE...")
+        break
+    else:
+        print("❌ ACCESS DENIED. GhostCoder is corrupting the system! Type 'OVERRIDE'.")
+
+# terminal sequence leading to game conclusion
+print("-" * 68)
+print(" [!] Purging malicious subroutines...")
+print(" [!] Severing GhostCoder remote socket connections...")
+print(" [!] Restoring system encryption matrices...")
+print(" [!] Vault security locks: SECURED (100% Integrity)")
+print("-" * 68)
+
+print("\n⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️")
+print("       🕵️ CASE FILE 1991: FINAL INVESTIGATION DOSSIER")
+print("⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️")
+print(f"  LEAD DETECTIVE : AGENT {name}")
+print("  CASE STATUS     : CLOSED & SOLVED")
+print("  TARGET ALIAS    : GHOST / GHOSTCODER (NEUTRALIZED)")
+print("  CYBER CLEARANCE : MASTER PYTHON SLEUTH (100% VERIFIED)")
+print("⊹ ࣪ ˖🕰️୭˚. ᵎᵎ🗝️"*5)
+
+print(f"\nThe precinct monitor flashes from amber warning lights to a steady matrix green.")
+print("The heavy pneumatic vault doors hit the frame with a satisfying thud, sealing")
+print("the rogue syndicate out of the mainframe for good.\n")
+print("A priority transmission from HQ prints across your screen:")
+print(f"--> 'Agent {name}, your investigative work and Python proficiency have saved")
+print("    the division from total blackout. GhostCoder's network is dismantled.'\n")
+print("You shut down the terminal screen, grab your coat, and step out into the rain.")
+print("Another night, another cyber case closed.")
+
+# Game Completion Banner & Credits
+print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
+print("   🏆 CONGRATULATIONS ON COMPLETING PYTHON CYBER SLEUTH 1991! 🏆  ")
+print("⫘⫘⫘⫘⫘⫘" * 5)
+print("\n--- GAME CREDITS ---")
+print("  Story & Architecture : Cyber Sleuth Developer")
+print(f"  Lead Programmer     : Agent {name}")
+print("  Curriculum           : Chapters 1 through 7 Completed")
+print("  Status               : System Safe. Case Closed.")
+print("⫘⫘⫘⫘⫘⫘" *5)
