@@ -533,7 +533,7 @@ print(f"        📊 CHAPTER 3 FINAL CLEARANCE REPORT: {ch3_score}/{ch3_max}    
 print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
 if ch3_score == ch3_max:
     print(f"🌟 OUTSTANDING WORK, AGENT {name}! Your decryption pipeline successfully cracked 'JKRVW' and unmasked GHOST.")
-    print("👉 Ready to proceed to Chapter 4 (Basic Input and Output)?")
+    print("👉 Ready to proceed to Chapter 4 (Basic Input and Output)")
 
 # --- CHAPTER 4: BASIC INPUT AND OUTPUT IN PYTHON ---
 print("\n˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚˙✧˖°⚖︎⋆｡ ˚")
@@ -723,7 +723,7 @@ print(f"        📊 CHAPTER 4 FINAL CLEARANCE REPORT: {ch4_score}/{ch4_max}    
 print("⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘")
 if ch4_score == ch4_max:
     print(f"🌟 STELLAR WORK, AGENT {name}! You have completed all 10 Basic Input and Output terminal challenges and secured the precinct files.")
-    print("👉 Ready to proceed to Chapter 5 (Conditional Statements)?")
+    print("👉 Ready to proceed to Chapter 5 (Conditional Statements)")
 
 # --- CHAPTER 5: CONDITIONAL STATEMENTS IN PYTHON ---
 print("\n˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚˚˙✧˖°⚖︎⋆｡ ˚")
